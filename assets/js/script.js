@@ -15,7 +15,7 @@ function addData() {
     if (limit <= fetchedData.length) {
         for (initial; initial < limit; initial++) {
             let index = initial + 1;
-            posts.innerHTML += "<li class=\"product\"><h2>" + index + "." + fetchedData[initial].title + "</h2><p>" + fetchedData[initial].body + "</p></li>";
+            posts.innerHTML += "<li class=\"post\"><h2>" + index + "." + fetchedData[initial].title + "</h2><p>" + fetchedData[initial].body + "</p></li>";
         }
         limit += 10;
     } else {

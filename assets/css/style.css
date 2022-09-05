@@ -238,6 +238,10 @@ li {
     flex-direction: column;
 }
 
+.post {
+    margin-bottom: 20px;
+}
+
 .add-more {
     padding: 20px 0;
     display: flex;
