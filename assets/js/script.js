@@ -21,4 +21,18 @@ function addData() {
     }
     limit += 10;
 }
-fetch(url).then(response => response.json()).then(data => fetchedData = data);
+// fetch(url).then(response => response.json()).then(data => fetchedData = data);
+
+let xmlObj = new XMLHttpRequest();
+xmlObj.onreadystatechange = function() {
+    try {
+        if (this.status == 200) {
+            alert("data fetch");
+            fetchedData = this.responseJSON;
+        }
+    } catch (e) {
+        alert(e);
+    }
+    this.open("GET", url);
+    this.send();
+};

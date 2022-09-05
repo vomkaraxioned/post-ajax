@@ -268,6 +268,10 @@ h2 {
     color: #66b032;
 }
 
+.dummy {
+    display: none;
+}
+
 
 /*=================================
   main styling ends here
