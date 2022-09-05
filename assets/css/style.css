@@ -238,10 +238,26 @@ li {
     flex-direction: column;
 }
 
+.add-more {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
 .btn-add {
     padding: 20px 5%;
+    border: 1px solid #66b032;
+    border-radius: 5px;
     margin: 0 auto;
+    background-color: #66b032;
+    color: #fff;
+    font-size: 21px;
     text-align: center;
+}
+
+.btn-add:hover {
+    background-color: #fff;
+    color: #66b032;
 }
 
 
