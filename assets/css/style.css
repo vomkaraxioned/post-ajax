@@ -244,6 +244,14 @@ li {
     justify-content: center;
 }
 
+h2 {
+    font-size: 21px;
+}
+
+.post {
+    margin-bottom: 20px;
+}
+
 .btn-add {
     padding: 20px 5%;
     border: 1px solid #66b032;
