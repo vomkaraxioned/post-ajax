@@ -11,7 +11,6 @@ let limit = 10;
 addBtn.addEventListener("click", addData);
 
 function addData() {
-    console.log(fetchedData);
     for (initial; initial < limit; initial++) {
         let index = initial + 1;
         posts.innerHTML += "<li class=\"post\"><h2>" + index + "." + fetchedData[initial].title + "</h2><p>" + fetchedData[initial].body + "</p></li>";
@@ -21,18 +20,16 @@ function addData() {
     }
     limit += 10;
 }
-// fetch(url).then(response => response.json()).then(data => fetchedData = data);
 
 let xmlObj = new XMLHttpRequest();
 xmlObj.onreadystatechange = function() {
     try {
-        if (this.status == 200) {
-            alert("data fetch");
-            fetchedData = this.responseJSON;
+        if (this.readyState == 4 && this.status == 200) {
+            fetchedData = JSON.parse(this.responseText);
         }
     } catch (e) {
         alert(e);
     }
-    this.open("GET", url);
-    this.send();
 };
+xmlObj.open("GET", url);
+xmlObj.send();
