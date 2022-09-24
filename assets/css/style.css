@@ -272,7 +272,9 @@ h2 {
     display: none;
 }
 
-
+.error {
+    text-align: center;
+}
 /*=================================
   main styling ends here
 =================================*/
